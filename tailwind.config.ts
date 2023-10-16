@@ -7,6 +7,10 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    backgroundImage: {
+      'img_bg_mobile': "url('../assets/pattern-bg-mobile.png')",
+      'img_bg_desktop': "url('../assets/pattern-bg-desktop.png')"
+  },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
