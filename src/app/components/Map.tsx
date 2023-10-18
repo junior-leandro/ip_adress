@@ -5,9 +5,9 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
 import MarkerIcon from '../../assets/icon-location.svg';
 import MarkerShadow from '../../../node_modules/leaflet/dist/images/marker-shadow.png';
 import 'leaflet/dist/leaflet.css';
-import { Infos } from './Infos';
 
-export function Map() {
+
+const Map = () => {
 
     let Position1 = 43.7311849000665;
     let Position2 = 7.414873166794561;
@@ -42,3 +42,5 @@ export function Map() {
                 
     )
 }
+
+export default Map;
