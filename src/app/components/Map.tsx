@@ -9,15 +9,15 @@ import 'leaflet/dist/leaflet.css';
 
 const Map = () => {
 
-    let Position1 = 43.7311849000665;
-    let Position2 = 7.414873166794561;
+    let Latitude = 43.7311849000665;
+    let Longitude = 7.414873166794561;
 
     return (
         
                 <MapContainer style={{
                     height: '67vh',
                     width: '100vw',
-                }} center={[Position1, Position2]} zoom={20} scrollWheelZoom={true}
+                }} center={[Latitude, Longitude]} zoom={18} scrollWheelZoom={true}
                 className='relative z-0'>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -32,7 +32,7 @@ const Map = () => {
                             shadowUrl: MarkerShadow.src,
                             shadowSize: [41, 41],
                         })
-                    } position={[Position1, Position2]}>
+                    } position={[Latitude, Longitude]}>
                         <Popup>
                             Você está aqui. <br /> :D
                         </Popup>
