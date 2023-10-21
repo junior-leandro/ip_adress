@@ -12,7 +12,7 @@ const DynamicMap = dynamic(() => import('../app/components/Map'), {
 export default function Home() {
   return (
 
-      <main className='w-full h-screen bg-red-700 flex flex-col items-center'>
+      <main className='w-full h-screen flex flex-col items-center'>
         <Header />
         <DynamicMap />
       </main>
