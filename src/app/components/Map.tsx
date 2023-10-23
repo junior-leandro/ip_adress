@@ -14,10 +14,7 @@ const Map = () => {
 
     return (
         
-                <MapContainer style={{
-                    height: '67vh',
-                    width: '100vw',
-                }} center={[Latitude, Longitude]} zoom={18} scrollWheelZoom={true}
+                <MapContainer style={{height: "67vh", width: "100%"}} center={[Latitude, Longitude]} zoom={18} scrollWheelZoom={true}
                 className='relative z-0'>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
