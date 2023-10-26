@@ -14,14 +14,14 @@ const useIpTracker = () => {
   const [timezone, setTimezone] = useState("");
   const [isp, setISP] = useState("");
 
-  // location
+  // latitude e longitude
   const [position, setPosition] = useState<[number, number]>([0, 0]);
 
   // erros
   const [ipErrorStatus, setIpErrorStatus] = useState(false);
 
 
-  // tracking the ip adress
+  // Rastrear endereço de IP
   const handleSubmitIp = async (e: FormEvent) => {
     e.preventDefault();
     const data = await ipAdressApi
@@ -32,7 +32,7 @@ const useIpTracker = () => {
         alert("Invalid ip, try again");
       });
 
-    // It's putting all keys information on states
+    // definindo os dados
     if (data) {
       setIpAdress(data.ip);
       setLocation(
@@ -46,7 +46,7 @@ const useIpTracker = () => {
 
   useEffect(() => {
     const handleData = async () => {
-      // request without a ip, the api will return data based on the user ip address
+      // solicitação sem IP, a API retornará dados com base no endereço IP do usuário
       const data = await ipAdressApi
         .get(``)
         .then((r) => r.data)
@@ -54,7 +54,7 @@ const useIpTracker = () => {
           console.log(err);
         });
 
-      // if data is valid
+      // se dados são validos
       if (data) {
         setIpAdress(data.ip);
         setLocation(
@@ -68,7 +68,7 @@ const useIpTracker = () => {
 
     handleData();
   }, []);
-/*
+
   useEffect(() => {
     if (ipErrorStatus) {
       document.querySelector('input[name="ip-adress"]')?.classList.add("error");
@@ -78,7 +78,7 @@ const useIpTracker = () => {
         ?.classList.remove("error");
     }
   }, [ipErrorStatus]);
-*/
+
   return {
     ip,
     setIp,
