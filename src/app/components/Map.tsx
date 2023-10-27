@@ -14,10 +14,9 @@ const Map = () => {
 
     const {position} = useIpTracker();
 
-
     return (
 
-        <MapContainer style={{ height: "67vh", width: "100%" }} center={position} zoom={11}
+        <MapContainer style={{ height: "67vh", width: "100%" }} center={position} zoom={4}
             className='relative z-0'>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'

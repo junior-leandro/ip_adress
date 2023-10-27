@@ -20,7 +20,6 @@ const Header = () => {
         setIp,
         setIpErrorStatus,
     } = useIpTracker();
-    console.log(location, position);
 
     return (
         <header className="w-full h-1/3 bg-img_bg_desktop bg-center bg-cover flex flex-col items-center z-10 2xl:pt-6">

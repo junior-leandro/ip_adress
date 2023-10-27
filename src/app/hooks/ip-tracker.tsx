@@ -15,7 +15,7 @@ const useIpTracker = () => {
   const [isp, setISP] = useState("");
 
   // latitude e longitude
-  const [position, setPosition] = useState<[number, number]>([0, 0]);
+  const [position, setPosition] = useState<[number, number]>([0,0]);
 
   // erros
   const [ipErrorStatus, setIpErrorStatus] = useState(false);
@@ -79,6 +79,7 @@ const useIpTracker = () => {
     }
   }, [ipErrorStatus]);
 
+  console.log(`Position: ${position}, IP: ${ipAdress}`)
   return {
     ip,
     setIp,
@@ -89,6 +90,8 @@ const useIpTracker = () => {
     timezone,
     position,
     setIpErrorStatus,
+    setPosition,
+    
   };
 };
 

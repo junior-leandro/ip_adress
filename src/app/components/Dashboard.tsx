@@ -14,6 +14,7 @@ const Dashboard: React.FC<InfoProps> = ({
     isp,
   }) => {
 
+
     return (
 
         <article className="w-full h-72 mt-7 flex items-center justify-center">
